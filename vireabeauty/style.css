@@ -1,1 +1,254 @@
+body#app {
+  background-color: white;
+}
+.banner--fixed img {
+  background-color: rgb(255 255 255);
+}
+.lazy__bg.lazy.bg-no-repeat.entered.loaded {
+    background-color: white;
+}
+section.s-block.s-block--fixed-banner.wide-placeholder:nth-of-type(1) > .container {
+  max-width: 100%;
+  margin-top: 0;
+padding:0;
+}
 
+#main-content > section:nth-child(2) {
+    margin-top: 0px;
+}
+/* ===== بطاقة المنتج ===== */
+.s-product-card-entry {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #f1f1f1;
+  transition: 
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* صورة المنتج */
+.s-product-card-image img {
+  transition: transform 0.6s ease;
+}
+
+/* العنوان */
+.s-product-card-content-title a {
+  transition: color 0.3s ease;
+}
+
+/* السعر */
+.s-product-card-price {
+  color: #111;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+/* زر الإضافة */
+.s-product-card-content-footer .s-button-element {
+  border-radius: 14px;
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* ===== Hover بطاقة المنتج ===== */
+.s-product-card-entry:hover {
+  transform: translateY(-8px);
+  border-color: #8f1841;
+  box-shadow: 0 18px 45px rgba(143, 24, 65, 0.22);
+}
+
+/* تكبير الصورة عند hover */
+.s-product-card-entry:hover .s-product-card-image img {
+  transform: scale(1.08);
+}
+
+/* تغيير لون العنوان عند hover */
+.s-product-card-entry:hover .s-product-card-content-title a {
+  color: #8f1841;
+}
+
+/* تغيير لون السعر عند hover */
+.s-product-card-entry:hover .s-product-card-price {
+  color: #8f1841;
+}
+
+/* تغيير زر الإضافة عند hover */
+.s-product-card-entry:hover .s-product-card-content-footer .s-button-element:not(.s-button-disabled) {
+  background-color: #8f1841;
+  border-color: #8f1841;
+  color: #fff;
+}
+
+/* ===== الزرار فقط ===== */
+.s-button-primary-outline.s-button-btn {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: none;
+  background: linear-gradient(135deg, #8f1841, #b52b57, #a01f4c, #8f1841);
+  background-size: 350% 350%;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .3px;
+  box-shadow: 0 12px 30px rgba(143, 24, 65, 0.35);
+  animation: 
+    softGradientShift 7s ease-in-out infinite,
+    buttonPulseGlow 4s ease-in-out infinite;
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    box-shadow .45s ease,
+    filter .45s ease;
+}
+
+/* طبقة لمعة مختلفة */
+.s-button-primary-outline.s-button-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255,255,255,.38), transparent 28%);
+  transform: translateX(-120%) scale(1.2);
+  opacity: .8;
+  animation: liquidLight 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* النص داخل الزرار */
+.s-button-primary-outline .s-button-text {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+/* الأيقونة مخفية قبل hover */
+.s-button-primary-outline .sicon-shopping-bag {
+  margin-left: 0;
+  opacity: 0;
+  transform: translateY(18px) scale(.7) rotate(-12deg);
+  width: 0;
+  overflow: hidden;
+  transition:
+    opacity .45s ease,
+    transform .45s cubic-bezier(.2,.9,.2,1.2),
+    width .45s ease;
+}
+
+/* Hover الزرار */
+.s-button-primary-outline.s-button-btn:hover {
+  transform: translateY(-5px) scale(1.045);
+  box-shadow: 0 24px 55px rgba(143, 24, 65, 0.55);
+  filter: saturate(1.08);
+}
+
+/* ظهور الأيقونة بسلاسة عند hover */
+.s-button-primary-outline.s-button-btn:hover .sicon-shopping-bag {
+  opacity: 1;
+  width: 18px;
+  transform: translateY(0) scale(1) rotate(0deg);
+  animation: bagWiggle .75s ease .15s;
+}
+
+/* تسريع اللمعة وقت hover */
+.s-button-primary-outline.s-button-btn:hover::before {
+  animation-duration: 2s;
+}
+
+/* Click effect */
+.s-button-primary-outline.s-button-btn:active {
+  transform: scale(.96);
+}
+
+/* ===== Keyframes الزرار ===== */
+@keyframes softGradientShift {
+  0% { background-position: 0% 50%; }
+  35% { background-position: 80% 20%; }
+  70% { background-position: 100% 80%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes buttonPulseGlow {
+  0%, 100% { box-shadow: 0 12px 30px rgba(143, 24, 65, .35); }
+  50% { box-shadow: 0 18px 42px rgba(181, 43, 87, .55); }
+}
+
+@keyframes liquidLight {
+  0% { transform: translateX(-120%) scale(1.2); opacity: 0; }
+  25% { opacity: .85; }
+  55% { transform: translateX(120%) scale(1.2); opacity: 0; }
+  100% { transform: translateX(120%) scale(1.2); opacity: 0; }
+}
+
+@keyframes bagWiggle {
+  0% { transform: translateY(0) rotate(0deg); }
+  35% { transform: translateY(-3px) rotate(-10deg); }
+  70% { transform: translateY(1px) rotate(7deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* ===== محتوى البطاقة ===== */
+.s-product-card-content {
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+
+.s-product-card-content-title a {
+  display: block;
+  font-size: 16px;
+  color: #8f1841;
+}
+
+.s-product-card-content-sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.s-product-card-price {
+  color: #000000;
+  font-weight: 700;
+  font-size: 21px;
+  transition: color 0.3s ease;
+}
+
+/* ===== تعديل الموبايل ===== */
+@media (max-width: 768px) {
+  .s-product-card-content-title a {
+    font-size: 14px;        /* تصغير حجم الخط */
+    text-align: center;     /* جعل النص في الوسط */
+    word-break: break-word; /* السماح لكسر الكلمات الطويلة */
+    display: block;
+  }
+}
+
+.footer-is-light .store-footer .store-footer__inner {
+    background-color: #FCE4EB;
+}
+.footer-is-light .store-footer {
+    background-color: #FCE4EB;
+}
+
+@media(max-width:767px){
+#photos-0-slider > div.swiper.s-slider-container.swiper-initialized.swiper-horizontal.swiper-rtl.swiper-ios.swiper-backface-hidden{
+   padding:0;
+}
+.s-products-slider-card {
+    max-width: 185px;
+  
+
+}
+.main-nav-container {
+    min-height: 56px;
+}
+  .s-button-element:not(:disabled):not([loading]) {
+    font-size: 11px;
+
+}
+
+}
