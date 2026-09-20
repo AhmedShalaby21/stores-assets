@@ -1,0 +1,147 @@
+body#app.index {
+    background: white; /* خلفية بيضاء لصفحة الهوم */
+}
+
+
+/* ==============================
+   3- إعدادات اللازي لود (Lazy Loading)
+============================== */
+.lazy__bg.lazy.entered.loaded {
+    background-size: contain;      /* ملاءمة الخلفية بدون قص */
+    background-repeat: no-repeat;  /* منع التكرار */
+}
+
+
+/* ==============================
+   4- إعدادات الصور والبنرات
+============================== */
+a.banner-entry.square-photos {
+    background: transparent; /* خلفية شفافة */
+}
+
+.banner-entry {
+    transition:
+        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),       /* حركة تكبير/تصغير */
+        background-size 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), /* انتقال حجم الخلفية */
+        background-position 0.6s ease;                             /* انتقال موضع الخلفية */
+}
+
+.banner-entry:hover {
+    transform: scale(1.05) translateY(-10px); /* تكبير وتحريك لأعلى عند الهوفر */
+}
+
+img {
+    background: transparent !important; /* إزالة خلفية الصور */
+    border-radius: 0;                   /* إزالة الزوايا الدائرية */
+}
+.index section.s-block--fixed-banner:nth-of-type(1) > .container,
+.index section.s-block--fixed-banner:nth-of-type(10) > .container{
+    max-width: 100%; /* تمديد الكونتينر بعرض الصفحة */
+    padding: 0;      /* إزالة الهوامش الداخلية */
+}
+
+section.s-block.s-block--fixed-banner.wide-placeholder:first-of-type {
+    margin-top: 0;
+}
+/* ==============================
+   8- المنتجات (Products)
+============================== */
+.s-product-card-entry,
+custom-salla-product-card.s-product-card-entry {
+    border: 2px solid #D3238C;               /* إطار المنتج */
+    border-radius: 8px;                      /* زوايا دائرية */
+    overflow: hidden;                        /* إخفاء المحتوى الزائد */
+    padding: 10px;                           /* حشو داخلي */
+    transition: transform 0.3s ease, 
+                box-shadow 0.3s ease;        /* تأثير حركة */
+}
+
+.s-product-card-entry:hover,
+custom-salla-product-card.s-product-card-entry:hover {
+    transform: scale(0.97); /* تصغير بسيط عند الهوفر */
+    box-shadow: none;       /* إلغاء الظل */
+}
+
+.s-product-card-price {
+    color: #D3238C;       /* لون السعر */
+    text-align: center;   /* توسيط السعر */
+}
+
+.s-product-card-content-sub {
+    text-align: center;
+    display: inline-block;
+}
+
+.s-product-card-content-title a {
+    font-size: 16px;     /* حجم النص */
+    font-weight: bold;   /* نص سميك */
+    text-align: center;
+    display: block;
+}
+
+/* ميل للصورة كلها لليمين وقت الهوفر */
+.s-product-card-image img {
+  transition: transform 0.4s ease;
+}
+
+.s-product-card-image img:hover {
+  transform: rotate(5deg); /* تميل 5 درجات لليمين */
+}
+
+/* ==============================
+   9- الأزرار (Buttons)
+============================== */
+.s-button-btn.s-button-primary-outline {
+    color: black;             /* لون النص */
+  border: 2px solid #D3238C
+}
+
+.s-button-btn.s-button-primary-outline:hover {
+    background-color: #D3238C;
+    color: white;
+}
+/* ==============================
+   10- الفوتر (Footer)
+============================== */
+.footer-is-light .store-footer .store-footer__inner{
+    background-color: #FDEAEC; /* خلفية الفوتر */
+}
+
+.store-footer a.flex h3 {
+    font-size: 0;                                      /* إخفاء النص */
+    background-image: url(https://cdn.salla.sa/cdn-cgi/image/fit=scale-down,width=400,height=400,onerror=redirect,format=auto/nEVnmn/yzTdYiKI5xr8D7QmWDGr3uXvOQsNy5ty8MNlCaI4.png); /* شعار */
+    background-size: contain;                          /* ملاءمة الحجم */
+    background-repeat: no-repeat;                      /* منع التكرار */
+    background-position: center;                       /* توسيط */
+    display: block;
+    width: 200px;
+    height: 100px;
+}
+
+.footer-is-light .store-footer {
+
+    background-color: #FDEAEC;
+}
+
+.copyright-text p {
+    color: #D3238C;
+}
+
+.store-footer h3 {
+    color: #D3238C;
+}
+.main-nav-container.fixed-pinned .navbar-brand img,
+.navbar-brand img {
+    max-height: 6rem; /* تحديد أقصى ارتفاع للشعار */
+}
+
+.banner-entry {
+    height: 255px;
+}
+
+section#featured-products-style2-3 {
+    background-color: white;
+}
+section#featured-products-style2-1 {
+    background-color: white;
+}
