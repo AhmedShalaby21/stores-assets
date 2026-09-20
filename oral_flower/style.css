@@ -145,3 +145,22 @@ section#featured-products-style2-3 {
 section#featured-products-style2-1 {
     background-color: white;
 }
+
+/* ==============================
+   12- responsive
+============================== */
+
+@media(max-width:767px){
+#photos-0-slider > div.swiper.s-slider-container.swiper-initialized.swiper-horizontal.swiper-rtl.swiper-ios.swiper-backface-hidden{
+   padding:0;
+}
+.s-products-slider-card {
+    max-width: 185px;
+}
+.main-nav-container {
+    min-height: 56px;
+}
+  .s-button-element:not(:disabled):not([loading]) {
+    font-size: 11px;
+}
+}
