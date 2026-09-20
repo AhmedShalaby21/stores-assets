@@ -104,7 +104,7 @@ custom-salla-product-card.s-product-card-entry:hover {
    10- الفوتر (Footer)
 ============================== */
 .footer-is-light .store-footer .store-footer__inner{
-    background-color: #FDEAEC; /* خلفية الفوتر */
+    background-color: #000; /* خلفية الفوتر */
 }
 
 .store-footer a.flex h3 {
