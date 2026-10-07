@@ -1,1 +1,97 @@
+/* شاشات الجوال (أقل من 768px) */
+@media (max-width: 767px) {
+  .s-block--banners .banner-square p {
+    color: #000000;
+    font-size: 14px; /* حجم الخط المناسب للجوال */
+  }
+}
 
+/* شاشات الديسكتوب (768px فما فوق) */
+@media (min-width: 768px) {
+  .s-block--banners .banner-square p {
+    color: #000000;
+    font-size: 22px; /* حجم الخط للديسكتوب */
+  }
+}
+
+.s-product-card-entry {
+    background-color: rgb(255 255 255 / 0%);
+}
+
+.index section.s-block--fixed-banner:nth-of-type(1) > .container {
+    max-width: 100%; /* تمديد الكونتينر بعرض الصفحة */
+    padding: 0;      /* إزالة الهوامش الداخلية */
+}
+
+section.s-block.s-block--fixed-banner.wide-placeholder:first-of-type {
+    margin-top: 0;
+}
+
+.flex.flex-col.rounded-md.overflow-hidden.text-center.bg-white.da-bgg {
+    background-color: transparent;
+}
+
+.faqs-list.grid.items-start.grid-cols-1.md\:grid-cols-2.gap-4 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.faqs-list__item.bg-gray-100.da-bgg.relative.overflow-hidden.rounded-md.border-2.border-transparent {
+    background-color: transparent;
+    border: 1px solid #421414;
+}
+
+.header-inner.inner.bg-white.da-bgm {
+    background-color: transparent;
+}
+
+img.logo-light.foo {
+    height: 6.5rem !important;
+}
+
+.s-slider-block__title h2:where([dir="rtl"], [dir="rtl"] *) {
+    padding-left: 0;
+}
+
+.s-slider-block__title {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+#squares-1 .box-img,
+#squares-2 .box-img {
+    border: 1px solid #C29A70 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important; /* لقص الصورة مع انحناء الحواف */
+}
+
+.tabs-wrapper {
+
+    background-color: rgb(255 255 255 / 0%);
+}
+/* ضبط المحاذاة لعنصر العنوان */
+.s-slider-block__title-right h2 {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px; /* المسافة بين النص والأيقونات */
+}
+
+/* الأيقونة اليمنى (قبل النص) */
+.s-slider-block__title-right h2::before {
+  content: "";
+  display: inline-block;
+  width: 50px;   /* عدّل العرض حسب المناسب لتصميمك */
+  height: 32px;  /* عدّل الارتفاع حسب المناسب لتصميمك */
+  background: url("https://archive.org/download/frame-35/Frame%2035.png") no-repeat center center;
+  background-size: contain;
+}
+
+/* الأيقونة اليسرى (بعد النص) */
+.s-slider-block__title-right h2::after {
+  content: "";
+  display: inline-block;
+  width: 50px;   /* عدّل العرض حسب المناسب لتصميمك */
+  height: 32px;  /* عدّل الارتفاع حسب المناسب لتصميمك */
+  background: url("https://archive.org/download/frame-35/Mask%20group%20%2825%29.png") no-repeat center center;
+  background-size: contain;
+}
