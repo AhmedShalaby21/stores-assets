@@ -83,3 +83,6 @@ body#app {
     max-height: 3em !important; /* تثبيت الارتفاع ليتناسب تماماً مع سطرين */
     word-break: break-word !important; /* لضمان كسر الكلمات الطويلة بدون تشويه التصميم */
 }
+.rounded-full {
+    border-radius: 0;
+}
