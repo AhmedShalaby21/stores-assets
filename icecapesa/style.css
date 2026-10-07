@@ -1,1 +1,85 @@
+@media (min-width: 1024px) {
+    #about-11 > div > div {
+        flex-direction: row-reverse;
+    }
+}
+/* توسيط المحتوى وجعله متناسقاً مثل الصورة */
+.about__content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+}
 
+/* تنسيق العنوان الرئيسي */
+.about__title {
+    color: #0b3954 !important; /* اللون الكحلي الداكن */
+    font-size: 2.3rem !important;
+    font-weight: 800 !important;
+    line-height: 1.4 !important;
+    margin-bottom: 20px !important;
+}
+
+/* تلوين كلمة "المثالي" باللون البرتقالي */
+.about__title span {
+    color: #f37021 !important; /* اللون البرتقالي */
+}
+
+/* تنسيق الوصف */
+.about__description {
+    color: #333333 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.8 !important;
+    max-width: 520px !important; /* لجعل الوصف ينقسم على سطرين متناسقين كما في الصورة */
+    margin: 0 auto 30px auto !important;
+    font-weight: 500 !important;
+}
+
+/* تنسيق زر "تسوق الآن" */
+.about__content .btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #f37021 !important; /* خلفية الزر البرتقالية */
+    color: #ffffff !important; /* لون النص الأبيض */
+    padding: 12px 36px !important;
+    height: auto !important;
+    border-radius: 4px !important; /* حواف شبه حادة أو حادة جداً كما بالصورة */
+    border: none !important;
+    font-weight: bold !important;
+    font-size: 1.05rem !important;
+    margin-top: 0 !important;
+    box-shadow: none !important;
+    transition: background-color 0.3s ease !important;
+}
+
+/* تأثير التمرير على الزر */
+.about__content .btn:hover {
+    background-color: #d85d14 !important;
+}
+
+/* إخفاء العنوان الفرعي إن وجد فارغاً لعدم ترك مسافات إضافية */
+.about__subtitle:empty {
+    display: none !important;
+}
+body#app {
+  background-color: white;
+}
+.banner--fixed img {
+  background-color: rgb(255 255 255);
+}
+.lazy__bg.lazy.bg-no-repeat.entered.loaded {
+    background-color: white;
+}
+.product-card__title a {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important; /* تحديد أقصى عدد أسطر (سطرين) */
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important; /* إخفاء النص الزائد */
+    text-overflow: ellipsis !important; /* إظهار علامة ... عند القص */
+    line-height: 1.5 !important; /* ارتفاع السطر ليكون مريحاً في القراءة */
+    max-height: 3em !important; /* تثبيت الارتفاع ليتناسب تماماً مع سطرين */
+    word-break: break-word !important; /* لضمان كسر الكلمات الطويلة بدون تشويه التصميم */
+}
