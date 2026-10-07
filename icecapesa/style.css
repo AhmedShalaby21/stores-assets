@@ -86,3 +86,6 @@ body#app {
 .rounded-full {
     border-radius: 0;
 }
+img.lazy.object-cover.mx-auto.w-40.h-40.rounded-full.group-hover\:scale-110.transition-all.duration-400.loaded {
+    object-fit: contain;
+}
