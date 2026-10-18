@@ -51,3 +51,15 @@ padding:0;
     height: 65px;
 }
  }
+
+
+.store-footer a.flex h3 {
+    font-size: 0;                                      /* إخفاء النص */
+    background-image: url(https://i.postimg.cc/crZRxLB2/download-2026-10-05T151715-436-1.png); /* شعار */
+    background-size: contain;                          /* ملاءمة الحجم */
+    background-repeat: no-repeat;                      /* منع التكرار */
+    background-position: center;                       /* توسيط */
+    display: block;
+    width: 200px;
+    height: 100px;
+}
