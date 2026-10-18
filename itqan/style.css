@@ -1,1 +1,53 @@
+@media (min-width: 1024px) {
+    .square-photos-grid--equal-2 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+ 
+  .banner-entry {
+    height: 65px;
+    background-color: white;
+}
+}
+body#app {
+  background-color: white;
+}
+.banner--fixed img {
+    background-color: #F7F9FC;
+}
+.lazy__bg.lazy.bg-no-repeat.entered.loaded {
+    background-color: white;
+}
+/* --------------------------------- 2. أول بانر (الهيرو) --------------------------------- */
+section.s-block.s-block--fixed-banner.wide-placeholder:nth-of-type(1) > .container {
+  max-width: 100%;
+  margin-top: 0;
+padding:0;
+}
 
+#main-content > section:nth-child(2) {
+    margin-top: 0px;
+}
+#main-content > section:nth-child(5) {
+    background-color: #F7F9FC;
+    padding: 70px;
+}
+#main-content > section:nth-child(7) > div > a > picture > img {
+    background-color: #ffffff;
+}
+#main-content > section:nth-child(7) > div {
+    max-width: 90% !important;
+}
+.footer-is-light .store-footer .store-footer__inner {
+    background-color: #F7F9FC;
+}
+.footer-is-light .store-footer {
+    background-color: #F7F9FC;
+}
+ @media (max-width: 767px) {
+    .square-photos-grid--equal-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+.banner-entry {
+    height: 65px;
+}
+ }
