@@ -1,65 +1,87 @@
-@media (min-width: 1024px) {
-    .square-photos-grid--equal-2 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
- 
-  .banner-entry {
-    height: 65px;
-    background-color: white;
-}
-}
+/* ==========================================================================
+   1. الإعدادات العامة وخلفيات الصفحة والعناصر
+   ========================================================================== */
 body#app {
   background-color: white;
 }
+
 .banner--fixed img {
-    background-color: #F7F9FC;
+  background-color: #F7F9FC;
 }
+
 .lazy__bg.lazy.bg-no-repeat.entered.loaded {
-    background-color: white;
+  background-color: white;
 }
-/* --------------------------------- 2. أول بانر (الهيرو) --------------------------------- */
+
+/* ==========================================================================
+   2. أقسام الصفحة الرئيسية (Main Content Sections)
+   ========================================================================== */
+/* أول بانر (الهيرو) */
 section.s-block.s-block--fixed-banner.wide-placeholder:nth-of-type(1) > .container {
   max-width: 100%;
   margin-top: 0;
-padding:0;
+  padding: 0;
 }
 
 #main-content > section:nth-child(2) {
-    margin-top: 0px;
+  margin-top: 0;
 }
-#main-content > section:nth-child(5) {
-    background-color: #F7F9FC;
-    padding: 70px;
-}
-#main-content > section:nth-child(8) > div > a > picture > img {
-    background-color: #ffffff;
-}
-#main-content > section:nth-child(8) > div {
-    max-width: 90% !important;
-}
-.footer-is-light .store-footer .store-footer__inner {
-    background-color: #F7F9FC;
-}
-.footer-is-light .store-footer {
-    background-color: #F7F9FC;
-}
- @media (max-width: 767px) {
-    .square-photos-grid--equal-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-.banner-entry {
-    height: 65px;
-}
- }
 
+#main-content > section:nth-child(5) {
+  background-color: #F7F9FC;
+  padding: 70px;
+}
+
+#main-content > section:nth-child(8) > div {
+  max-width: 90% !important;
+}
+
+#main-content > section:nth-child(8) > div > a > picture > img {
+  background-color: #ffffff;
+}
+
+/* ==========================================================================
+   3. الفوتر (Footer)
+   ========================================================================== */
+.footer-is-light .store-footer,
+.footer-is-light .store-footer .store-footer__inner {
+  background-color: #F7F9FC;
+}
 
 .store-footer a.flex h3 {
-    font-size: 0;                                      /* إخفاء النص */
-    background-image: url(https://i.postimg.cc/crZRxLB2/download-2026-10-05T151715-436-1.png); /* شعار */
-    background-size: contain;                          /* ملاءمة الحجم */
-    background-repeat: no-repeat;                      /* منع التكرار */
-    background-position: center;                       /* توسيط */
-    display: block;
-    width: 200px;
-    height: 100px;
+  font-size: 0;                                         /* إخفاء النص */
+  background-image: url("https://i.postimg.cc/crZRxLB2/download-2026-10-05T151715-436-1.png"); /* شعار */
+  background-size: contain;                             /* ملاءمة الحجم */
+  background-repeat: no-repeat;                         /* منع التكرار */
+  background-position: center;                          /* توسيط */
+  display: block;
+  width: 200px;
+  height: 100px;
+}
+
+/* ==========================================================================
+   4. شاشات الكمبيوتر والديسكتوب (Desktop: 1024px فما فوق)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .square-photos-grid--equal-2 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .banner-entry {
+    height: 65px;
+    background-color: white;
+  }
+}
+
+/* ==========================================================================
+   5. شاشات الجوال والموبايل (Mobile: 767px فأقل)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .square-photos-grid--equal-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .banner-entry {
+    height: 65px;
+  }
 }
