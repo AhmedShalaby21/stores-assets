@@ -31,10 +31,10 @@ padding:0;
     background-color: #F7F9FC;
     padding: 70px;
 }
-#main-content > section:nth-child(7) > div > a > picture > img {
+#main-content > section:nth-child(8) > div > a > picture > img {
     background-color: #ffffff;
 }
-#main-content > section:nth-child(7) > div {
+#main-content > section:nth-child(8) > div {
     max-width: 90% !important;
 }
 .footer-is-light .store-footer .store-footer__inner {
