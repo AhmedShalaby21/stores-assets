@@ -1,1 +1,349 @@
+/* ==========================================================
+   1. الإعدادات العامة والهيدر والفوتر (General & Footer)
+   ========================================================== */
+body#app {
+  background-color: white;
+}
 
+.banner--fixed img {
+  background-color: rgb(255 255 255);
+}
+
+.lazy__bg.lazy.bg-no-repeat.entered.loaded {
+  background-color: white;
+}
+@media (max-width: 767px) {
+.flex.gap-4 {
+    margin-right: 25% !important;
+}
+}
+/* أول بانر (الهيرو) */
+section.s-block.s-block--fixed-banner.wide-placeholder:nth-of-type(1) > .container {
+  max-width: 100%;
+  margin-top: 0;
+  padding: 0;
+}
+
+#main-content > section:nth-child(2) {
+  margin-top: 0px;
+}
+
+/* تصميم الفوتر */
+.store-footer {
+  background-color: #BB5E76;
+}
+
+.store-footer__inner {
+  background-color: #BB5E76;
+}
+
+.copyright-text p {
+  color: rgb(255 255 255);
+}
+
+
+/* ==========================================================
+   2. بطاقة المنتج (Product Card) وحالة الـ Hover
+   ========================================================== */
+.s-product-card-entry {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #f1f1f1;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+/* صورة المنتج */
+.s-product-card-image img {
+  transition: transform 0.6s ease;
+}
+
+/* محتوى البطاقة */
+.s-product-card-content {
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+
+.s-product-card-content-title a {
+  display: block;
+  font-size: 16px;
+  color: #BB5E76;
+  transition: color 0.3s ease;
+}
+
+.s-product-card-content-sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* السعر */
+.s-product-card-price {
+  color: #000000;
+  font-weight: 700;
+  font-size: 21px;
+  transition: color 0.3s ease;
+}
+
+/* زر الإضافة داخل البطاقة */
+.s-product-card-content-footer .s-button-element {
+  border-radius: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* --- Hover بطاقة المنتج --- */
+.s-product-card-entry:hover {
+  transform: translateY(-8px);
+  border-color: #BB5E76;
+  box-shadow: 0 18px 45px rgba(187, 94, 118, 0.25);
+}
+
+.s-product-card-entry:hover .s-product-card-image img {
+  transform: scale(1.08);
+}
+
+.s-product-card-entry:hover .s-product-card-content-title a {
+  color: #BB5E76;
+}
+
+.s-product-card-entry:hover .s-product-card-price {
+  color: #BB5E76;
+}
+
+.s-product-card-entry:hover .s-product-card-content-footer .s-button-element:not(.s-button-disabled) {
+  background-color: #BB5E76;
+  border-color: #BB5E76;
+  color: #fff;
+}
+
+
+/* ==========================================================
+   3. تصميم الأزرار التفاعلية (Primary Outline Button)
+   ========================================================== */
+.s-button-primary-outline.s-button-btn {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: none;
+  background: linear-gradient(135deg, #a44b62, #d17890, #c46880, #BB5E76);
+  background-size: 350% 350%;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .3px;
+  box-shadow: 0 12px 30px rgba(187, 94, 118, 0.35);
+  animation: 
+    softGradientShift 7s ease-in-out infinite,
+    buttonPulseGlow 4s ease-in-out infinite;
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    box-shadow .45s ease,
+    filter .45s ease;
+}
+
+/* طبقة اللمعة للزرار */
+.s-button-primary-outline.s-button-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255,255,255,.38), transparent 28%);
+  transform: translateX(-120%) scale(1.2);
+  opacity: .8;
+  animation: liquidLight 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* النص داخل الزرار */
+.s-button-primary-outline .s-button-text {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+/* الأيقونة مخفية قبل الـ Hover */
+.s-button-primary-outline .sicon-shopping-bag {
+  margin-left: 0;
+  opacity: 0;
+  transform: translateY(18px) scale(.7) rotate(-12deg);
+  width: 0;
+  overflow: hidden;
+  transition:
+    opacity .45s ease,
+    transform .45s cubic-bezier(.2,.9,.2,1.2),
+    width .45s ease;
+}
+
+/* Hover الزرار */
+.s-button-primary-outline.s-button-btn:hover {
+  transform: translateY(-5px) scale(1.045);
+  box-shadow: 0 24px 55px rgba(187, 94, 118, 0.55);
+  filter: saturate(1.08);
+}
+
+.s-button-primary-outline.s-button-btn:hover .sicon-shopping-bag {
+  opacity: 1;
+  width: 18px;
+  transform: translateY(0) scale(1) rotate(0deg);
+  animation: bagWiggle .75s ease .15s;
+}
+
+.s-button-primary-outline.s-button-btn:hover::before {
+  animation-duration: 2s;
+}
+
+/* Click effect */
+.s-button-primary-outline.s-button-btn:active {
+  transform: scale(.96);
+}
+
+
+/* ==========================================================
+   4. الحركات والتأثيرات الحركية (Keyframes)
+   ========================================================== */
+@keyframes softGradientShift {
+  0% { background-position: 0% 50%; }
+  35% { background-position: 80% 20%; }
+  70% { background-position: 100% 80%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes buttonPulseGlow {
+  0%, 100% { box-shadow: 0 12px 30px rgba(187, 94, 118, .35); }
+  50% { box-shadow: 0 18px 42px rgba(209, 120, 144, .55); }
+}
+
+@keyframes liquidLight {
+  0% { transform: translateX(-120%) scale(1.2); opacity: 0; }
+  25% { opacity: .85; }
+  55% { transform: translateX(120%) scale(1.2); opacity: 0; }
+  100% { transform: translateX(120%) scale(1.2); opacity: 0; }
+}
+
+@keyframes bagWiggle {
+  0% { transform: translateY(0) rotate(0deg); }
+  35% { transform: translateY(-3px) rotate(-10deg); }
+  70% { transform: translateY(1px) rotate(7deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+
+/* ==========================================================
+   5. تعديلات الشاشات الصغيرة والموبايل (Media Queries)
+   ========================================================== */
+@media (max-width: 768px) {
+  .s-product-card-content-title a {
+    font-size: 14px;
+    text-align: center;
+    word-break: break-word;
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  #photos-0-slider > div.swiper.s-slider-container.swiper-initialized.swiper-horizontal.swiper-rtl.swiper-ios.swiper-backface-hidden {
+    padding: 0;
+  }
+  
+  .s-products-slider-card {
+    max-width: 185px;
+  }
+  
+  .main-nav-container {
+    min-height: 56px;
+  }
+  
+  .s-button-element:not(:disabled):not([loading]) {
+    font-size: 11px;
+  }
+
+  /* توسيط شعار الفوتر ومكوناته على الموبايل */
+  #app > div.app-inner.flex.flex-col.min-h-full > footer > div.store-footer__inner > div > div.lg\:col-span-2.rtl\:lg\:pl-20.ltr\:lg\:pr-20 > img {
+    margin-right: auto !important;
+    margin-left: auto !important;
+    display: block !important;
+  }
+
+  a.flex.items-center.m-0 {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .max-w-sm.leading-6.mb-6 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .store-footer h3 {
+    font-size: 1.125rem !important;
+    font-weight: 700 !important;
+    line-height: 1.75rem !important;
+    margin-bottom: .75rem !important;
+    text-align: center !important;
+  }
+
+  .s-menu-footer-list {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .s-contacts-item {
+    display: flex !important;
+    align-items: center !important;
+    font-size: 0.875rem !important;
+    line-height: 1 !important;
+    justify-content: center !important;
+  }
+
+  .s-social-list {
+    display: flex !important;
+    gap: 0.625rem !important;
+    justify-content: center !important;
+  }
+
+  .flex.gap-4 {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .s-trust-badges-wrapper {
+    margin-right: 37%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* توسيط الحاوية الخارجية في منتصف الشاشة */
+  .flex:has(salla-trust-badges) {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  /* جعل بطاقة سلة عمودية ومتوسطنة */
+  salla-trust-badges.s-trust-badges-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  /* توسيط الصورة وتصفير أي هوامش جانبية */
+  salla-trust-badges .s-trust-badges-image {
+    margin: 0 auto 8px auto !important;
+    display: block !important;
+  }
+
+  /* توسيط حاوية النصوص */
+  salla-trust-badges .s-trust-badges-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+}
