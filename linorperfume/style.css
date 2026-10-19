@@ -309,3 +309,37 @@ section.s-block.s-block--fixed-banner.wide-placeholder:nth-of-type(1) > .contain
     margin-right: 37%;
   }
 }
+
+@media (max-width: 768px) {
+  /* توسيط الحاوية الخارجية في منتصف الشاشة */
+  .flex:has(salla-trust-badges) {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  /* جعل بطاقة سلة عمودية ومتوسطنة */
+  salla-trust-badges.s-trust-badges-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  /* توسيط الصورة وتصفير أي هوامش جانبية */
+  salla-trust-badges .s-trust-badges-image {
+    margin: 0 auto 8px auto !important;
+    display: block !important;
+  }
+
+  /* توسيط حاوية النصوص */
+  salla-trust-badges .s-trust-badges-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+}
