@@ -306,3 +306,8 @@ padding:0;
     justify-content: center !important;
   }
 }
+.flex.gap-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
