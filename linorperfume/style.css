@@ -12,7 +12,11 @@ body#app {
 .lazy__bg.lazy.bg-no-repeat.entered.loaded {
   background-color: white;
 }
-
+@media (max-width: 767px) {
+.flex.gap-4 {
+    margin-right: 25% !important;
+}
+}
 /* أول بانر (الهيرو) */
 section.s-block.s-block--fixed-banner.wide-placeholder:nth-of-type(1) > .container {
   max-width: 100%;
