@@ -236,6 +236,16 @@ padding:0;
     background-color: #FBFAF9;
 }
 .s-reviews-testimonial {
-    background-color: #F9F7F2;
+    background-color: transparent;
     border: 1px solid #e5e5e5;
+}
+.store-footer a.flex h3 {
+    font-size: 0;                                      /* إخفاء النص */
+    background-image: url(https://cdn.files.salla.network/other/1041915932/b0672587-4700-4162-9c5e-f71caf3dd02d-original.webp); /* شعار */
+    background-size: contain;                          /* ملاءمة الحجم */
+    background-repeat: no-repeat;                      /* منع التكرار */
+    background-position: center;                       /* توسيط */
+    display: block;
+    width: 200px;
+    height: 100px;
 }
