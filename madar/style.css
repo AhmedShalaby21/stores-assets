@@ -1,1 +1,597 @@
+body#app {
+  background-color: #FFF7EE;
+}
+.banner--fixed img {
+  background-color: #FFF7EE;
+}
+.lazy__bg.lazy.bg-no-repeat.entered.loaded {
+    background-color: #FFF7EE;
+}
+/* --------------------------------- 2. أول بانر (الهيرو) --------------------------------- */
+section.s-block.s-block--fixed-banner.wide-placeholder:nth-of-type(1) > .container {
+  max-width: 60%;
+  margin-top: 0;
+padding:0;
+}
 
+#main-content > section:nth-child(2) {
+    margin-top: 0px;
+}
+/* ===== بطاقة المنتج ===== */
+.s-product-card-entry {
+    border-radius: 18px;
+    overflow: hidden;
+    background: #FFF7EE;
+    border: 1px solid rgba(24, 58, 88, 0.12);
+    transition: transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+    border: 2px solid #E7CEAF;
+}
+
+/* صورة المنتج */
+.s-product-card-image img {
+  transition: transform 0.6s ease;
+}
+
+/* العنوان */
+.s-product-card-content-title a {
+  color: #183A58;
+  transition: color 0.3s ease;
+}
+
+/* السعر */
+.s-product-card-price {
+  color: #183A58;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+/* زر الإضافة */
+.s-product-card-content-footer .s-button-element {
+  border-radius: 14px;
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* ===== Hover بطاقة المنتج ===== */
+.s-product-card-entry:hover {
+  transform: translateY(-8px);
+  border-color: #183A58;
+  box-shadow: 0 18px 45px rgba(24, 58, 88, 0.18);
+}
+
+/* تكبير الصورة عند hover */
+.s-product-card-entry:hover .s-product-card-image img {
+  transform: scale(1.08);
+}
+
+/* لون العنوان عند hover */
+.s-product-card-entry:hover .s-product-card-content-title a {
+  color: #183A58;
+}
+
+/* لون السعر عند hover */
+.s-product-card-entry:hover .s-product-card-price {
+  color: #183A58;
+}
+
+/* تغيير زر الإضافة عند hover الكارت */
+.s-product-card-entry:hover .s-product-card-content-footer .s-button-element:not(.s-button-disabled) {
+  background-color: #EBD8C3;
+  border-color: #183A58;
+  color: #183A58;
+}
+
+/* ===== الزرار فقط (الخلفية بني فاتح/بيج والتيكست كحلي) ===== */
+.s-button-primary-outline.s-button-btn {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 0;
+  background: linear-gradient(135deg, #EBD8C3, #F5EADB, #DFCAA7, #EBD8C3);
+  background-size: 350% 350%;
+  color: #183A58 !important;
+  font-weight: 700;
+  letter-spacing: .3px;
+  box-shadow: 0 12px 30px rgba(235, 216, 195, 0.45);
+  animation: 
+    softGradientShift 7s ease-in-out infinite,
+    buttonPulseGlow 4s ease-in-out infinite;
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    box-shadow .45s ease,
+    filter .45s ease;
+}
+
+/* طبقة لمعة مختلفة */
+.s-button-primary-outline.s-button-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.65), transparent 28%);
+  transform: translateX(-120%) scale(1.2);
+  opacity: .8;
+  animation: liquidLight 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* النص داخل الزرار */
+.s-button-primary-outline .s-button-text {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #183A58 !important;
+}
+
+/* الأيقونة مخفية قبل hover */
+.s-button-primary-outline .sicon-shopping-bag {
+  margin-left: 0;
+  opacity: 0;
+  transform: translateY(18px) scale(.7) rotate(-12deg);
+  width: 0;
+  overflow: hidden;
+  color: #183A58 !important;
+  transition:
+    opacity .45s ease,
+    transform .45s cubic-bezier(.2,.9,.2,1.2),
+    width .45s ease;
+}
+
+/* Hover الزرار */
+.s-button-primary-outline.s-button-btn:hover {
+  transform: translateY(-5px) scale(1.045);
+  box-shadow: 0 20px 45px rgba(24, 58, 88, 0.22);
+  filter: saturate(1.05);
+}
+
+/* ظهور الأيقونة بسلاسة عند hover */
+.s-button-primary-outline.s-button-btn:hover .sicon-shopping-bag {
+  opacity: 1;
+  width: 18px;
+  transform: translateY(0) scale(1) rotate(0deg);
+  animation: bagWiggle .75s ease .15s;
+}
+
+/* تسريع اللمعة وقت hover */
+.s-button-primary-outline.s-button-btn:hover::before {
+  animation-duration: 2s;
+}
+
+/* Click effect */
+.s-button-primary-outline.s-button-btn:active {
+  transform: scale(.96);
+}
+
+/* ===== Keyframes الزرار ===== */
+@keyframes softGradientShift {
+  0% { background-position: 0% 50%; }
+  35% { background-position: 80% 20%; }
+  70% { background-position: 100% 80%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes buttonPulseGlow {
+  0%, 100% { box-shadow: 0 12px 30px rgba(235, 216, 195, .45); }
+  50% { box-shadow: 0 16px 36px rgba(24, 58, 88, .18); }
+}
+
+@keyframes liquidLight {
+  0% { transform: translateX(-120%) scale(1.2); opacity: 0; }
+  25% { opacity: .85; }
+  55% { transform: translateX(120%) scale(1.2); opacity: 0; }
+  100% { transform: translateX(120%) scale(1.2); opacity: 0; }
+}
+
+@keyframes bagWiggle {
+  0% { transform: translateY(0) rotate(0deg); }
+  35% { transform: translateY(-3px) rotate(-10deg); }
+  70% { transform: translateY(1px) rotate(7deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* ===== محتوى البطاقة ===== */
+.s-product-card-content {
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+
+.s-product-card-content-title a {
+  display: block;
+  font-size: 16px;
+  color: #183A58;
+}
+
+.s-product-card-content-sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.s-product-card-price {
+  color: #183A58;
+  font-weight: 700;
+  font-size: 21px;
+  transition: color 0.3s ease;
+}
+
+/* ===== تعديل الموبايل ===== */
+@media (max-width: 768px) {
+  .s-product-card-content-title a {
+    font-size: 14px;
+    text-align: center;
+    word-break: break-word;
+    display: block;
+    color: #183A58;
+  }
+/* --------------------------------- 2. أول بانر (الهيرو) --------------------------------- */
+section.s-block.s-block--fixed-banner.wide-placeholder:nth-of-type(1) > .container {
+  max-width: 100%;
+  margin-top: 0;
+padding:0;
+}
+
+}
+.s-product-card-content {
+    background-color: #FFFFFF;
+}
+.store-footer {
+ background-color: #133151;             /* إضافة بعض الهوامش للفوتر */
+}
+.store-footer__inner {
+ background-color: #133151;             /* إضافة بعض الهوامش للفوتر */
+}
+.copyright-text p {
+    color: rgb(255 255 255);
+}
+@media(max-width:767px){
+#photos-0-slider > div.swiper.s-slider-container.swiper-initialized.swiper-horizontal.swiper-rtl.swiper-ios.swiper-backface-hidden{
+   padding:0;
+}
+.s-products-slider-card {
+    max-width: 185px;
+  
+
+}
+.main-nav-container {
+    min-height: 56px;
+}
+  .s-button-element:not(:disabled):not([loading]) {
+    font-size: 11px;
+
+}
+
+}
+
+/* ==========================================================================
+   1. الهيدر والحاوية الرئيسية (Main Navigation Bar)
+   ========================================================================== */
+#mainnav,
+#mainnav.main-nav-container,
+#mainnav .inner {
+  background-color: #12334f !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  transition: background-color 0.3s ease;
+}
+
+/* ==========================================================================
+   2. نصوص روابط المنيو في الديسكتوب (Desktop Menu Links)
+   ========================================================================== */
+#mainnav custom-main-menu .main-menu > li > a,
+#mainnav custom-main-menu .main-menu > li > a span {
+  color: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px !important;
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+#mainnav custom-main-menu .main-menu > li {
+  margin: 0 14px !important;
+}
+
+#mainnav custom-main-menu .main-menu > li > a:hover,
+#mainnav custom-main-menu .main-menu > li > a:hover span {
+  color: #ebd8c3 !important;
+}
+
+/* ==========================================================================
+   3. الشعار (Store Logo) - تكبيره وتوضيحه
+   ========================================================================== */
+#mainnav a.navbar-brand {
+  display: flex !important;
+  align-items: center !important;
+}
+
+#mainnav a.navbar-brand img {
+  filter: brightness(0) invert(1) !important; /* تحويله للأبيض */
+  height: 60px !important;                     /* تكبير ارتفاع اللوجو */
+  max-height: 65px !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+/* ==========================================================================
+   4. أيقونات الحساب والسلة (تلوينها بالأبيض فقط دون لمس مقاساتها)
+   ========================================================================== */
+/* زر تسجيل الدخول */
+#mainnav .s-user-menu-login-btn,
+#mainnav .s-user-menu-login-btn svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* أيقونة السلة وحاويتها */
+#mainnav .s-cart-summary-wrapper,
+#mainnav .s-cart-summary-wrapper svg,
+#mainnav .s-cart-summary-wrapper i {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* إخفاء إجمالي السعر والإبقاء على الأيقونة فقط */
+#mainnav .s-cart-summary-content,
+#mainnav .s-cart-summary-total {
+  display: none !important;
+}
+
+/* دائرة رقم السلة */
+#mainnav .s-cart-summary-count {
+  background-color: #ebd8c3 !important;
+  color: #12334f !important;
+  font-weight: 700 !important;
+}
+
+/* ==========================================================================
+   5. شاشات الجوال وقائمة الموبايل (Mobile)
+   ========================================================================== */
+#mainnav [data-testid="store-header-mobile-toggle"] i,
+#mainnav .mburger i {
+  color: #ffffff !important;
+}
+
+@media (max-width: 1023px) {
+  #mainnav a.navbar-brand img {
+    height: 48px !important;
+    max-height: 50px !important;
+  }
+
+  #mobile-menu.mobile-menu {
+    background-color: #12334f !important;
+    color: #ffffff !important;
+  }
+
+  #mobile-menu .main-menu li a,
+  #mobile-menu .main-menu li a span {
+    color: #ffffff !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+
+  #mobile-menu .btn--close,
+  #mobile-menu .close-mobile-menu {
+    color: #ffffff !important;
+  }
+
+  #mobile-menu .mm-spn--navbar {
+    background-color: #0b2236 !important;
+    color: #ebd8c3 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+}
+.topnav-is-dark .top-navbar {
+    background-color: #12334F;
+}
+/* ===================================================
+   نسخة الموبايل (معتمدة بالكامل)
+   =================================================== */
+@media (max-width: 768px) {
+  
+  /* ضبط الحاوية الرئيسية للفوتر */
+  footer.store-footer {
+    text-align: center !important;
+    padding-top: 2rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  /* تحويل محتوى الفوتر لترتيب عمودي سلس وتوسيط كامل */
+  footer.store-footer .container,
+  footer.store-footer > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 1.5rem !important;
+  }
+
+  /* 1. قسم البراند واللوجو والاسم في المنتصف تماماً */
+  footer.store-footer .store-footer__brand,
+  footer.store-footer .footer-brand,
+  footer.store-footer .max-w-sm {
+    order: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+
+  /* رابط اللوجو وتوسيعه */
+  footer.store-footer a.flex {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  /* تطبيق اللوجو بالخلفية وإخفاء النص مع التوسيط */
+  .store-footer a.flex h3 {
+    font-size: 0 !important;
+    background-image: url('https://cdn.files.salla.network/other/1443571984/6f8ee17c-5ea9-40d4-b878-06e62fc6a5b0-original.webp') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    display: block !important;
+    width: 200px !important;
+    height: 100px !important;
+    margin: 0 auto 0.5rem auto !important;
+    filter: invert(1);
+  }
+
+  /* إخفاء صورة اللوجو الافتراضية للاكتفاء باللوجو المخصص */
+  footer.store-footer .store-footer__brand img:not([src*="6f8ee17c"]),
+  footer.store-footer .footer-brand img:not([src*="6f8ee17c"]) {
+    display: none !important;
+  }
+
+  /* وصف المتجر */
+  footer.store-footer p.ql-direction-rtl,
+  footer.store-footer .max-w-sm p {
+    font-size: 0.85rem !important;
+    line-height: 1.7 !important;
+    opacity: 0.9 !important;
+    max-width: 320px !important;
+    margin: 0 auto 0.75rem auto !important;
+    text-align: center !important;
+  }
+
+  /* شارات التوثيق (وثيقة العمل الحر / معروف) */
+  footer.store-footer salla-trust-badges {
+    order: 2 !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0.5rem auto !important;
+  }
+
+  /* 2. الروابط المهمة في المنتصف */
+  footer.store-footer salla-menu {
+    order: 3 !important;
+    width: 100% !important;
+    margin: 0.5rem 0 !important;
+  }
+
+  footer.store-footer .s-menu-footer-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  footer.store-footer .s-menu-footer-item {
+    font-size: 0.9rem !important;
+    opacity: 0.9 !important;
+    text-align: center !important;
+  }
+
+  /* 3. شريط أزرار التواصل */
+  footer.store-footer salla-contacts {
+    order: 4 !important;
+    width: 100% !important;
+    border-top: 1px dashed rgba(255, 255, 255, 0.2) !important;
+    padding-top: 1.25rem !important;
+  }
+
+  footer.store-footer salla-contacts .s-contacts-title {
+    display: none !important;
+  }
+
+  footer.store-footer .s-contacts-list {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.6rem !important;
+    padding: 0 !important;
+  }
+
+  footer.store-footer .s-contacts-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    padding: 5px 14px !important;
+    border-radius: 9999px !important;
+    font-size: 0.8rem !important;
+    color: inherit !important;
+  }
+
+  /* 4. أيقونات السوشيال ميديا في دوائر مفرغة */
+  footer.store-footer salla-social {
+    order: 5 !important;
+    margin: 0.25rem 0 1rem 0 !important;
+  }
+
+  footer.store-footer salla-social ul.s-social-list {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 0 !important;
+  }
+
+  footer.store-footer salla-social li.s-social-link a {
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 50% !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: inherit !important;
+  }
+
+  footer.store-footer salla-social svg {
+    width: 16px !important;
+    height: 16px !important;
+    fill: currentColor !important;
+  }
+
+  /* 5. الشريط السفلي (طرق الدفع والحقوق) */
+  footer.store-footer salla-payments {
+    order: 6 !important;
+    width: 100% !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding-top: 1rem !important;
+  }
+
+  footer.store-footer .s-payments-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    justify-content: center !important;
+  }
+
+  footer.store-footer .store-footer__bottom,
+  footer.store-footer .copyright {
+    order: 7 !important;
+    font-size: 0.8rem !important;
+    opacity: 0.8 !important;
+    margin-top: 0.5rem !important;
+    text-align: center !important;
+  }
+}
+ .store-footer a.flex h3 {
+    font-size: 0 !important;
+    background-image: url('https://cdn.files.salla.network/other/1443571984/6f8ee17c-5ea9-40d4-b878-06e62fc6a5b0-original.webp') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    display: block !important;
+    width: 200px !important;
+    height: 100px !important;
+    margin: 0 auto 0.5rem auto !important;
+    filter: invert(1);
+  }
