@@ -1,1 +1,451 @@
+/* ==========================================================================
+   1. الإعدادات العامة والخلفيات الأساسية
+   ========================================================================== */
+body#app,
+.banner--fixed img,
+.lazy__bg.lazy.bg-no-repeat.entered.loaded {
+  background-color: white;
+}
 
+#main-content > section:nth-child(3) {
+  margin-top: 0px;
+}
+.banner-entry {
+    height: 260px;
+}
+/* --------------------------------- أول بانر (الهيرو) --------------------------------- */
+section.s-block.s-block--fixed-banner.wide-placeholder:nth-of-type(1) > .container {
+  max-width: 100%;
+  margin-top: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  section.s-block.s-block--fixed-banner.wide-placeholder:nth-of-type(1) > .container {
+    max-width: 100%;
+    margin-top: 0;
+    padding: 0;
+  }
+}
+
+/* ==========================================================================
+   2. بطاقة المنتج (Product Card)
+   ========================================================================== */
+.s-product-card-entry {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #FFF7EE;
+  border: 2px solid #E7CEAF;
+  transition: 
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* صورة المنتج */
+.s-product-card-image img {
+  transition: transform 0.6s ease;
+}
+
+/* محتوى البطاقة */
+.s-product-card-content {
+  background-color: #FFFFFF;
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+
+/* العنوان */
+.s-product-card-content-title a {
+  display: block;
+  font-size: 16px;
+  color: #8C663D;
+  transition: color 0.3s ease;
+}
+
+.s-product-card-content-sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* السعر */
+.s-product-card-price {
+  color: #8C663D;
+  font-weight: 700;
+  font-size: 21px;
+  transition: color 0.3s ease;
+}
+
+/* زر الإضافة الافتراضي */
+.s-product-card-content-footer .s-button-element {
+  border-radius: 14px;
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* ===== Hover بطاقة المنتج ===== */
+.s-product-card-entry:hover {
+  transform: translateY(-8px);
+  border-color: #8C663D;
+  box-shadow: 0 18px 45px rgba(140, 102, 61, 0.22);
+}
+
+.s-product-card-entry:hover .s-product-card-image img {
+  transform: scale(1.08);
+}
+
+.s-product-card-entry:hover .s-product-card-content-title a,
+.s-product-card-entry:hover .s-product-card-price {
+  color: #8C663D;
+}
+
+.s-product-card-entry:hover .s-product-card-content-footer .s-button-element:not(.s-button-disabled) {
+  background-color: #EBD8C3;
+  border-color: #8C663D;
+  color: #8C663D;
+}
+
+/* ==========================================================================
+   3. تصميم زر إضافة للسلة المخصص (Primary Button)
+   ========================================================================== */
+.s-button-primary-outline.s-button-btn {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 0;
+  background: linear-gradient(135deg, #EBD8C3, #F5EADB, #DFCAA7, #EBD8C3);
+  background-size: 350% 350%;
+  color: #8C663D !important;
+  font-weight: 700;
+  letter-spacing: .3px;
+  box-shadow: 0 12px 30px rgba(140, 102, 61, 0.25);
+  animation: 
+    softGradientShift 7s ease-in-out infinite,
+    buttonPulseGlow 4s ease-in-out infinite;
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    box-shadow .45s ease,
+    filter .45s ease;
+}
+
+/* طبقة لمعة الزر */
+.s-button-primary-outline.s-button-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.65), transparent 28%);
+  transform: translateX(-120%) scale(1.2);
+  opacity: .8;
+  animation: liquidLight 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* النص داخل الزر */
+.s-button-primary-outline .s-button-text {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #8C663D !important;
+}
+
+/* الأيقونة داخل الزر قبل الـ Hover */
+.s-button-primary-outline .sicon-shopping-bag {
+  margin-left: 0;
+  opacity: 0;
+  transform: translateY(18px) scale(.7) rotate(-12deg);
+  width: 0;
+  overflow: hidden;
+  color: #8C663D !important;
+  transition:
+    opacity .45s ease,
+    transform .45s cubic-bezier(.2,.9,.2,1.2),
+    width .45s ease;
+}
+
+/* Hover الزر */
+.s-button-primary-outline.s-button-btn:hover {
+  transform: translateY(-5px) scale(1.045);
+  box-shadow: 0 20px 45px rgba(140, 102, 61, 0.35);
+  filter: saturate(1.05);
+}
+
+.s-button-primary-outline.s-button-btn:hover .sicon-shopping-bag {
+  opacity: 1;
+  width: 18px;
+  transform: translateY(0) scale(1) rotate(0deg);
+  animation: bagWiggle .75s ease .15s;
+}
+
+.s-button-primary-outline.s-button-btn:hover::before {
+  animation-duration: 2s;
+}
+
+.s-button-primary-outline.s-button-btn:active {
+  transform: scale(.96);
+}
+
+/* حركة الأزرار */
+@keyframes softGradientShift {
+  0% { background-position: 0% 50%; }
+  35% { background-position: 80% 20%; }
+  70% { background-position: 100% 80%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes buttonPulseGlow {
+  0%, 100% { box-shadow: 0 12px 30px rgba(140, 102, 61, .25); }
+  50% { box-shadow: 0 16px 36px rgba(140, 102, 61, .38); }
+}
+
+@keyframes liquidLight {
+  0% { transform: translateX(-120%) scale(1.2); opacity: 0; }
+  25% { opacity: .85; }
+  55% { transform: translateX(120%) scale(1.2); opacity: 0; }
+  100% { transform: translateX(120%) scale(1.2); opacity: 0; }
+}
+
+@keyframes bagWiggle {
+  0% { transform: translateY(0) rotate(0deg); }
+  35% { transform: translateY(-3px) rotate(-10deg); }
+  70% { transform: translateY(1px) rotate(7deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+  
+/* ==========================================================================
+   5. الفوتر - عام وللديسكتوب (Footer)
+   ========================================================================== */
+.footer-is-light .store-footer .store-footer__inner {
+    background-color: #F3E0D0;
+}
+.footer-is-light .store-footer {
+    background-color: #F3E0D0;
+}
+
+.copyright-text p {
+  color: rgb(255, 255, 255);
+}
+
+/* لوجو الفوتر بالخلفية */
+.store-footer a.flex h3 {
+  font-size: 0 !important;
+  background-image: url('https://cdn.files.salla.network/other/1001816948/264ad614-4a2a-4e54-8fb1-583d9d2a0b98-original.webp') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  display: block !important;
+  width: 200px !important;
+  height: 100px !important;
+  margin: 0 auto 0.5rem auto !important;
+}
+
+/* ==========================================================================
+   6. تخصيصات الشاشات الصغيرة والموبايل (Mobile Responsiveness)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* نصوص كروت المنتجات في الموبايل */
+  .s-product-card-content-title a {
+    font-size: 14px;
+    text-align: center;
+    word-break: break-word;
+    display: block;
+    color: #8C663D;
+  }
+
+  /* فوتر الموبايل المعتمد */
+  footer.store-footer {
+    text-align: center !important;
+    padding-top: 2rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  footer.store-footer .container,
+  footer.store-footer > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 1.5rem !important;
+  }
+
+  /* 1. قسم البراند واللوجو */
+  footer.store-footer .store-footer__brand,
+  footer.store-footer .footer-brand,
+  footer.store-footer .max-w-sm {
+    order: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+
+  footer.store-footer a.flex {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  footer.store-footer .store-footer__brand img:not([src*="6f8ee17c"]),
+  footer.store-footer .footer-brand img:not([src*="6f8ee17c"]) {
+    display: none !important;
+  }
+
+  footer.store-footer p.ql-direction-rtl,
+  footer.store-footer .max-w-sm p {
+    font-size: 0.85rem !important;
+    line-height: 1.7 !important;
+    opacity: 0.9 !important;
+    max-width: 320px !important;
+    margin: 0 auto 0.75rem auto !important;
+    text-align: center !important;
+  }
+
+  /* شارات التوثيق */
+  footer.store-footer salla-trust-badges {
+    order: 2 !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0.5rem auto !important;
+  }
+
+  /* 2. الروابط المهمة */
+  footer.store-footer salla-menu {
+    order: 3 !important;
+    width: 100% !important;
+    margin: 0.5rem 0 !important;
+  }
+
+  footer.store-footer .s-menu-footer-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  footer.store-footer .s-menu-footer-item {
+    font-size: 0.9rem !important;
+    opacity: 0.9 !important;
+    text-align: center !important;
+  }
+
+  /* 3. شريط أزرار التواصل */
+  footer.store-footer salla-contacts {
+    order: 4 !important;
+    width: 100% !important;
+    border-top: 1px dashed rgba(255, 255, 255, 0.2) !important;
+    padding-top: 1.25rem !important;
+  }
+
+  footer.store-footer salla-contacts .s-contacts-title {
+    display: none !important;
+  }
+
+  footer.store-footer .s-contacts-list {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.6rem !important;
+    padding: 0 !important;
+  }
+
+  footer.store-footer .s-contacts-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    padding: 5px 14px !important;
+    border-radius: 9999px !important;
+    font-size: 0.8rem !important;
+    color: inherit !important;
+  }
+
+  /* 4. أيقونات السوشيال ميديا */
+  footer.store-footer salla-social {
+    order: 5 !important;
+    margin: 0.25rem 0 1rem 0 !important;
+  }
+
+  footer.store-footer salla-social ul.s-social-list {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 0 !important;
+  }
+
+  footer.store-footer salla-social li.s-social-link a {
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 50% !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: inherit !important;
+  }
+
+  footer.store-footer salla-social svg {
+    width: 16px !important;
+    height: 16px !important;
+    fill: currentColor !important;
+  }
+
+  /* 5. طرق الدفع والحقوق */
+  footer.store-footer salla-payments {
+    order: 6 !important;
+    width: 100% !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding-top: 1rem !important;
+  }
+
+  footer.store-footer .s-payments-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    justify-content: center !important;
+  }
+
+  footer.store-footer .store-footer__bottom,
+  footer.store-footer .copyright {
+    order: 7 !important;
+    font-size: 0.8rem !important;
+    opacity: 0.8 !important;
+    margin-top: 0.5rem !important;
+    text-align: center !important;
+  }
+}
+
+/* ضبط السلايدر وأزرار الموبايل العامة */
+@media (max-width: 767px) {
+  #photos-0-slider > div.swiper.s-slider-container.swiper-initialized.swiper-horizontal.swiper-rtl.swiper-ios.swiper-backface-hidden {
+    padding: 0;
+  }
+  .s-products-slider-card {
+    max-width: 185px;
+  }
+  .main-nav-container {
+    min-height: 56px;
+  }
+  .s-button-element:not(:disabled):not([loading]) {
+    font-size: 11px;
+  }
+.banner-entry {
+    height: 160px !important;
+}
+}
