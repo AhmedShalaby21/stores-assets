@@ -1,3 +1,8 @@
+@media (min-width: 1024px) {
+  #main-content > section.s-block.s-block--photos-slider.repeated-block {
+    display: none !important;
+  }
+}
 body#app {
   background-color: white;
 }
@@ -57,9 +62,6 @@ section.s-block.s-block--photos-slider img {
     salla-slider.photos-slider .swiper:where([dir=rtl],[dir=rtl] *) {
         padding-left: 0;
     }
-#main-content > section.s-block.s-block--photos-slider.repeated-block {
-    display: none;
-}
 }
 salla-slider.photos-slider .swiper:where([dir=rtl],[dir=rtl] *) {
     padding-left: 0;
