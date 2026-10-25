@@ -467,7 +467,7 @@ padding:0;
   }
 #main-content > section:nth-child(13) > div.square-photos-grid.square-photos-grid--featured-3.grid.grid-flow-row.gap-3.sm\:gap-8 {
     grid-template-columns: repeat(1, minmax(0px, 1fr));
-    gap: 0;
+    gap: 5px;
 }
 .banner-entry {
     height: 220px;
