@@ -57,6 +57,9 @@ section.s-block.s-block--photos-slider img {
     salla-slider.photos-slider .swiper:where([dir=rtl],[dir=rtl] *) {
         padding-left: 0;
     }
+#main-content > section.s-block.s-block--photos-slider.repeated-block {
+    display: none;
+}
 }
 salla-slider.photos-slider .swiper:where([dir=rtl],[dir=rtl] *) {
     padding-left: 0;
@@ -505,5 +508,8 @@ salla-slider.photos-slider .swiper:where([dir=rtl],[dir=rtl] *) {
   }
 .banner-entry {
     height: 190px;
+}
+#main-content > section:nth-child(3) {
+    display: none;
 }
 }
