@@ -276,9 +276,9 @@ section.s-block.s-block--photos-slider img {
    5. شاشات الديسكتوب الكبيرة (Desktop >= 1024px)
    ========================================================================== */
 @media (min-width: 1024px) {
-  #main-content > section.s-block.s-block--photos-slider.repeated-block {
-    display: none !important;
-  }
+ section.s-block.s-block--photos-slider.repeated-block {
+    display: none;
+}
 
   salla-slider.photos-slider .swiper-slide {
     margin-left: 8rem;
