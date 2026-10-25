@@ -276,12 +276,7 @@ section.s-block.s-block--photos-slider img {
    5. شاشات الديسكتوب الكبيرة (Desktop >= 1024px)
    ========================================================================== */
 @media (min-width: 1024px) {
- section.s-block.s-block--photos-slider.repeated-block {
-    display: none;
-}
- #main-content > section:nth-child(4) {
-    display: none;
-  }
+
   salla-slider.photos-slider .swiper-slide {
     margin-left: 8rem;
     margin-right: 8rem;
@@ -292,7 +287,11 @@ section.s-block.s-block--photos-slider img {
     padding-left: 0;
   }
 }
-
+@media (min-width: 1024px) {
+  section:has(#photos-1-slider) {
+    display: none !important;
+  }
+}
 /* ==========================================================================
    6. شاشات الموبايل (Mobile <= 768px)
    ========================================================================== */
