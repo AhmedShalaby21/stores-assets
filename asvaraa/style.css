@@ -6,6 +6,11 @@
     display: none !important;
   }
 }
+@media (max-width: 767px) {
+  section[component-id="1153775668"] {
+    display: none !important;
+  }
+}
 body#app {
   background-color: white;
 }
