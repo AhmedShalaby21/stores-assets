@@ -1,6 +1,11 @@
 /* ==========================================================================
    1. الإعدادات العامة والخلفيات
    ========================================================================== */
+@media (min-width: 1024px) {
+  section[component-id="934715007"] {
+    display: none !important;
+  }
+}
 body#app {
   background-color: white;
 }
@@ -285,11 +290,6 @@ section.s-block.s-block--photos-slider img {
 
   salla-slider.photos-slider .swiper:where([dir="rtl"], [dir="rtl"] *) {
     padding-left: 0;
-  }
-}
-@media (min-width: 1024px) {
-  section:has(#photos-1-slider) {
-    display: none !important;
   }
 }
 /* ==========================================================================
