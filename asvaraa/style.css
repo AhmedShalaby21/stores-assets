@@ -1,7 +1,7 @@
 @media (min-width: 1024px) {
   #main-content > section.s-block.s-block--photos-slider.repeated-block {
     display: none !important;
-  }
+}
 }
 body#app {
   background-color: white;
