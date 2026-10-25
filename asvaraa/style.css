@@ -279,7 +279,9 @@ section.s-block.s-block--photos-slider img {
  section.s-block.s-block--photos-slider.repeated-block {
     display: none;
 }
-
+ #main-content > section:nth-child(4) {
+    display: none;
+  }
   salla-slider.photos-slider .swiper-slide {
     margin-left: 8rem;
     margin-right: 8rem;
