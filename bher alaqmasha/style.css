@@ -1,1 +1,9 @@
-
+.triple-image-banner .banner-item {
+    height: 420px;
+}
+.banner-content img, .banner-content video {
+    width: 100%;
+    flex: 1;
+    object-fit: contain !important;
+    visibility: visible !important;
+}
