@@ -1,12 +1,13 @@
 /* ===========================
    1. إعدادات عامة للصفحة
 =========================== */
+img.h-80.mb-10.w-full.object-cover.rounded-md {
+    object-fit: contain !important;
+}
 img.h-full.w-full.object-cover {
     object-fit: contain;
 }
-img.h-80.mb-10.w-full.object-cover.rounded-md {
-    object-fit: contain;
-}
+
 body#app {
   background-color: #F3EAD7;
 }
