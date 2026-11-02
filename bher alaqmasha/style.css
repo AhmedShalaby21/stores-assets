@@ -14,3 +14,9 @@
 .reviewVerticalButton {
     display: none !important;
 }
+.section-spacing {
+    margin-top: 35px;
+}
+.athena-card-content {
+    padding: 0px;
+}
