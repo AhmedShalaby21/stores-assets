@@ -12,5 +12,5 @@
     font-weight: 700;
 }
 .reviewVerticalButton {
-    display: none;
+    display: none !important;
 }
