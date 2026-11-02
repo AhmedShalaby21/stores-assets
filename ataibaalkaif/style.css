@@ -1,7 +1,7 @@
 /* ===========================
    1. إعدادات عامة للصفحة
 =========================== */
-img.h-80.mb-10.w-full.object-cover.rounded-md {
+.object-cover {
     object-fit: contain !important;
 }
 
@@ -543,7 +543,7 @@ section.s-block.s-block--fixed-banner.wide-placeholder:nth-of-type(1) > .contain
 .banner-entry {
     height: 204px;
 }
-img.h-80.mb-10.w-full.object-cover.rounded-md {
+.object-cover {
     object-fit: contain !important;
 }
 }
