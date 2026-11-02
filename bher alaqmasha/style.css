@@ -15,8 +15,8 @@
     display: none !important;
 }
 .section-spacing {
-    margin-top: 35px;
+    margin-top: 35px !important;
 }
 .athena-card-content {
-    padding: 0px;
+    padding: 0px !important;
 }
