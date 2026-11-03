@@ -1,1 +1,1 @@
-
+document.addEventListener("DOMContentLoaded",function(){let t=document.createElement("img");t.src="https://i.postimg.cc/zGzZdSw-p/Mask-group-(36).png",t.alt="Abnorm logo",t.style.maxWidth="160px",t.style.marginBottom="15px";let e=document.querySelector("div.lg\\:col-span-2.rtl\\:lg\\:pl-20.ltr\\:lg\\:pr-20");e&&e.prepend(t)});
