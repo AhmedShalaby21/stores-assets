@@ -1,1 +1,84 @@
+body#app.index {
+    background: white; /* خلفية بيضاء لصفحة الهوم */
+}
 
+
+/* ==============================
+   3- إعدادات اللازي لود (Lazy Loading)
+============================== */
+.lazy__bg.lazy.entered.loaded {
+    background-size: contain;      /* ملاءمة الخلفية بدون قص */
+    background-repeat: no-repeat;  /* منع التكرار */
+}
+
+ticketing-system {
+    display: none;
+}
+/* ==============================
+   4- إعدادات الصور والبنرات
+============================== */
+a.banner-entry.square-photos {
+    background: transparent; /* خلفية شفافة */
+}
+
+.banner-entry {
+    transition:
+        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),       /* حركة تكبير/تصغير */
+        background-size 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), /* انتقال حجم الخلفية */
+        background-position 0.6s ease;                             /* انتقال موضع الخلفية */
+}
+
+.banner-entry:hover {
+    transform: scale(1.05) translateY(-10px); /* تكبير وتحريك لأعلى عند الهوفر */
+}
+
+img {
+    background: transparent !important; /* إزالة خلفية الصور */
+    border-radius: 0;                   /* إزالة الزوايا الدائرية */
+}
+
+.index section.s-block--fixed-banner:nth-of-type(1) > .container,
+.index section.s-block--fixed-banner:nth-of-type(3) > .container,
+.index section.s-block--fixed-banner:nth-of-type(5) > .container,
+.index section.s-block--fixed-banner:nth-of-type(9) > .container {
+    max-width: 100%; /* تمديد الكونتينر بعرض الصفحة */
+    padding: 0;      /* إزالة الهوامش الداخلية */
+}
+
+section.s-block.s-block--fixed-banner.wide-placeholder:first-of-type {
+    margin-top: 0;
+}
+
+/* ==============================
+   10- الفوتر (Footer)
+============================== */
+.store-footer__inner {
+    background-color: #252525; /* خلفية الفوتر */
+}
+
+.store-footer a.flex h3 {
+    font-size: 0;                                      /* إخفاء النص */
+    background-image: url(https://archive.org/download/download-2026-09-29-t-114108.519-1/download%20-%202026-09-29T114108.519%201.png); /* شعار */
+    background-size: contain;                          /* ملاءمة الحجم */
+    background-repeat: no-repeat;                      /* منع التكرار */
+    background-position: center;                       /* توسيط */
+    display: block;
+    width: 200px;
+    height: 100px;
+}
+
+
+.store-footer {
+
+    background-color: #252525;
+}
+
+.copyright-text p {
+
+    color: rgb(255 255 255);
+}
+@media (max-width: 767px) {
+  a.wa-s-n {
+    margin-bottom: 30% !important;
+  }
+}
