@@ -1,1 +1,175 @@
+/* ==============================
+   3- إعدادات اللازي لود (Lazy Loading)
+============================== */
+.lazy__bg.lazy.entered.loaded {
+    background-size: contain;      /* ملاءمة الخلفية بدون قص */
+    background-repeat: no-repeat;  /* منع التكرار */
+}
 
+
+/* ==============================
+   4- إعدادات الصور والبنرات
+============================== */
+a.banner-entry.square-photos {
+    background: transparent; /* خلفية شفافة */
+}
+
+.banner-entry {
+    transition:
+        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),       /* حركة تكبير/تصغير */
+        background-size 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), /* انتقال حجم الخلفية */
+        background-position 0.6s ease;                             /* انتقال موضع الخلفية */
+}
+
+.banner-entry:hover {
+    transform: scale(1.05) translateY(-10px); /* تكبير وتحريك لأعلى عند الهوفر */
+}
+
+img {
+    background: transparent !important; /* إزالة خلفية الصور */
+    border-radius: 0;                   /* إزالة الزوايا الدائرية */
+}
+
+
+.index section.s-block--fixed-banner:nth-of-type(1) > .container {
+    max-width: 100%; /* تمديد الكونتينر بعرض الصفحة */
+    padding: 0;      /* إزالة الهوامش الداخلية */
+}
+
+section.s-block.s-block--fixed-banner.wide-placeholder:first-of-type {
+    margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    .square-photos-grid--featured-5 {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+/* تحديد القسم برقم المكون لضمان عدم التأثير على باقي أقسام المتجر */
+section[component-id="2113746973"] .banner-entry {
+    height: 500px !important;
+
+}
+}
+
+ /* 2. تجريد العنصر الأول تماماً من كل خصائص التمدد والدمج */
+  .square-photos-grid--featured-5 > *:first-child,
+  .square-photos-grid--featured-5 > .banner-entry:first-child {
+    grid-row: 1 / 2 !important;
+    grid-column: auto !important;
+    grid-area: auto !important;
+  }
+
+/* ==============================
+   8- المنتجات (Products)
+============================== */
+.s-product-card-entry,
+custom-salla-product-card.s-product-card-entry {
+    border: 2px solid #D1D1D1;               /* إطار المنتج */
+    border-radius: 8px;                      /* زوايا دائرية */
+    overflow: hidden;                        /* إخفاء المحتوى الزائد */
+    padding: 10px;                           /* حشو داخلي */
+    transition: transform 0.3s ease, 
+                box-shadow 0.3s ease;        /* تأثير حركة */
+}
+
+.s-product-card-entry:hover,
+custom-salla-product-card.s-product-card-entry:hover {
+    transform: scale(0.97); /* تصغير بسيط عند الهوفر */
+    box-shadow: none;       /* إلغاء الظل */
+}
+
+.s-product-card-price {
+    color: #702C3D;       /* لون السعر */
+    text-align: center;   /* توسيط السعر */
+}
+
+.s-product-card-content-sub {
+    text-align: center;
+    display: inline-block;
+}
+
+.s-product-card-content-title a {
+    font-size: 16px;     /* حجم النص */
+    font-weight: bold;   /* نص سميك */
+    text-align: center;
+    display: block;
+}
+
+/* ميل للصورة كلها لليمين وقت الهوفر */
+.s-product-card-image img {
+  transition: transform 0.4s ease;
+}
+
+.s-product-card-image img:hover {
+  transform: rotate(5deg); /* تميل 5 درجات لليمين */
+}
+
+/* ==============================
+   9- الأزرار (Buttons)
+============================== */
+.s-button-btn.s-button-primary-outline {
+    background-color: #702C3D; /* لون الخلفية */
+    color: white;             /* لون النص */
+}
+
+.s-button-btn.s-button-primary-outline:hover {
+    background-color: #702C3D;
+    color: white;
+}
+
+
+/* ==============================
+   12- responsive
+============================== */
+
+@media(max-width:767px){
+#photos-0-slider > div.swiper.s-slider-container.swiper-initialized.swiper-horizontal.swiper-rtl.swiper-ios.swiper-backface-hidden{
+   padding:0;
+}
+.s-products-slider-card {
+    max-width: 185px;
+}
+.main-nav-container {
+    min-height: 56px;
+}
+  .s-button-element:not(:disabled):not([loading]) {
+    font-size: 11px;
+}
+
+     .square-photos-grid--featured-5 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+#main-content > section:nth-child(9) > div > a:nth-child(1) {
+    height: 310px;
+}
+  #main-content > section:nth-child(9) > div > a:nth-child(2) {
+    height: 310px;
+}
+.lazy__bg.lazy.bg-no-repeat.entered.loaded {
+    background-size: cover !important;
+}
+}
+
+.main-nav-container.fixed-pinned .navbar-brand img,
+.navbar-brand img {
+    max-height: 6rem; /* تحديد أقصى ارتفاع للشعار */
+}
+
+/* ==============================
+   10- الفوتر (Footer)
+============================== */
+.store-footer__inner {
+    background-color: #702C3D; /* خلفية الفوتر */
+}
+
+
+
+.store-footer {
+
+    background-color: #702C3D;
+}
+
+.copyright-text p {
+
+    color: rgb(255 255 255);
+}
