@@ -270,7 +270,7 @@ padding:0;
   /* تطبيق اللوجو بالخلفية وإخفاء النص مع التوسيط */
   .store-footer a.flex h3 {
     font-size: 0 !important;
-    background-image: url('https://cdn.salla.sa/cdn-cgi/image/fit=scale-down,width=400,height=400,onerror=redirect,format=auto/dnVpA/slSbIvtMSt2fxL6RpD7HcUf8EJyleiK9yKZQalRD.png') !important;
+    background-image: url('https://cdn.files.salla.network/other/1532301620/2de8a858-6a66-40ea-8e6f-7e4708c680d8-standard.webp') !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -418,7 +418,7 @@ padding:0;
 }
  .store-footer a.flex h3 {
     font-size: 0 !important;
-    background-image: url('https://cdn.salla.sa/cdn-cgi/image/fit=scale-down,width=400,height=400,onerror=redirect,format=auto/dnVpA/slSbIvtMSt2fxL6RpD7HcUf8EJyleiK9yKZQalRD.png') !important;
+    background-image: url('https://cdn.files.salla.network/other/1532301620/2de8a858-6a66-40ea-8e6f-7e4708c680d8-standard.webp') !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
